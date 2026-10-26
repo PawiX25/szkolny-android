@@ -309,7 +309,10 @@ class BuildManager(val app: App) : CoroutineScope {
         progressDialog: AlertDialog?,
         reason: InvalidBuildReason
     ) {
-        progressDialog?.dismiss()
+        // The activity may already be gone (e.g. MainActivity finished on first start
+        // while redirecting to login), so dismissing its dialog would throw.
+        if (!activity.isFinishing && !activity.isDestroyed)
+            progressDialog?.dismiss()
 
         val message = activity.getString(
             reason.message,
