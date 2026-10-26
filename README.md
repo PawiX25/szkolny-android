@@ -1,3 +1,9 @@
+Fork [Szkolny.eu](https://github.com/szkolny-eu/szkolny-android), który naprawia wywalanie się aplikacji, gdy wracasz do niej po jakimś czasie.
+
+Gotowy APK jest w Releases. Przed instalacją odinstaluj Szkolny.eu ze Sklepu Play, bo inaczej się nie zainstaluje.
+
+---
+
 <div align="center">
 
 ![Readme Banner](.github/readme-banner.png)
